@@ -1,0 +1,44 @@
+<ion-view view-title="Details">
+    <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+        <div class="tabs">
+            <a class="tab-item " href="#/tab/dashboard">
+                <i class="icon ion-star"></i>
+            </a>
+            <a class="tab-item" href="#/tab/order">
+                <i class="icon ion-ios-cart"></i>
+            </a>
+            <a class="tab-item active" href="#/tab/contacts">
+                <i class="icon ion-person"></i>
+            </a>
+            <a class="tab-item" href="#/tab/chats">
+                <i class="icon ion-chatbubble"></i>
+            </a>
+            <a class="tab-item" href="#/tab/settings">
+                <i class="icon ion-gear-a"></i>
+            </a>
+        </div>
+    </div>
+    <ion-content>
+        <br><br>
+        <div class="card" ng-repeat="detail in details.datailsEmp" >
+            <div class="item item-divider text-center">
+                {{detail.profile.name}}
+            </div>
+            <div class="item item-text-wrap text-center">
+                Email Id: {{detail.emails[0].address}}
+            </div>
+            <div class="item item-text-wrap text-center">
+                Mobile No: {{detail.profile.mobile}}
+            </div>
+            <div class="item item-text-wrap text-center">
+            <button class="button button-full icon-left ion-chatbubble-working button-positive" ng-click="details.chatOpen('{{detail._id}}')" >Send Message</button>
+            </div>
+            <div class="item item-divider text-center">
+                @CybuzzSC
+            </div>
+        </div>
+
+    </ion-content>
+
+</ion-view>
+

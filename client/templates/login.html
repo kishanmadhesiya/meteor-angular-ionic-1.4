@@ -1,0 +1,39 @@
+
+
+<ion-view view-title="Login">
+
+    <ion-content>
+        <div class="card">
+  <div class="item item-divider text-center">
+    Login to CybuzzSC
+  </div>
+  <div class="item item-text-wrap">
+    <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Email Id</span>
+                <input type="text" placeholder="kishan@cybuzzsc.com" ng-model="login.data.email" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" required>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Password</span>
+                <input type="password" placeholder="Pata Nahi" ng-model="login.data.password" required>
+            </label>
+        <button class="button button-block button-positive" ng-click="login.btnlogin()">
+  Sign In
+</button>
+            <a href="#/signup" class="button button-block button-assertive">
+  Create Account
+</a>
+
+        </div>
+  </div>
+  
+</div>
+        
+
+
+    </ion-content>
+<div class="bar bar-footer bar-balanced">
+  <div class="title">Copyright@CybuzzSC</div>
+</div>
+</ion-view>
+

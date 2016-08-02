@@ -1,0 +1,15 @@
+{
+  "name": "myorder",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-ecmascript": "0.0.3",
+    "angular-sanitize": "^1.5.8",
+    "angular-ui-router": "^0.2.18",
+    "meteor-node-stubs": "~0.2.0"
+  }
+}

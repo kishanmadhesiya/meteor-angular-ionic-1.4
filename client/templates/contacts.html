@@ -1,0 +1,40 @@
+<ion-view view-title="Contacts">
+    <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+        <div class="tabs">
+            <a class="tab-item " href="#/tab/dashboard">
+                <i class="icon ion-star"></i>
+            </a>
+            <a class="tab-item" href="#/tab/order">
+                <i class="icon ion-ios-cart"></i>
+            </a>
+            <a class="tab-item active" href="#/tab/contacts">
+                <i class="icon ion-person"></i>
+            </a>
+            <a class="tab-item" href="#/tab/chats">
+                <i class="icon ion-chatbubble"></i>
+            </a>
+            <a class="tab-item" href="#/tab/settings">
+                <i class="icon ion-gear-a"></i>
+            </a>
+        </div>
+    </div>
+    <ion-content>
+        <div class="list">
+
+  <a class="item item-icon-left" href="#">
+    <i class="icon ion-email"></i>
+    Check mail
+  </a>
+   
+  <a ng-repeat="message in contacts.allUsers" ng-if="contacts.getCurrentUser != message._id" class="item item-icon-left item-icon-right" href="#tab/contacts/{{message._id}}">
+    <i class="icon ion-person"></i>
+    {{message.profile.name}}
+    <i class="icon ion-ios-telephone-outline"></i>
+  </a>
+
+</div>
+
+    </ion-content>
+
+</ion-view>
+
