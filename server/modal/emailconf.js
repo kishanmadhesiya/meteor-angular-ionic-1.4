@@ -1,14 +1,14 @@
 Meteor.startup(function () {
   smtp = {
   username: 'kishanmadhesiya@gmail.com',
-  password: 'kishan@1306', // masked - a gmail application-specific 16 character password to use for two-factor auth
+  password: '-------', // masked - a gmail application-specific 16 character password to use for two-factor auth
   server:   'smtp.gmail.com',
   port: 465 // also tried 465 to no avail
   };
   process.env.MAIL_URL = 'smtp://' + encodeURIComponent(smtp.username) + ':' + encodeURIComponent(smtp.password) + '@' + encodeURIComponent(smtp.server) + ':' + smtp.port;
 });
 Accounts.emailTemplates.siteName = "CybuzzSC";
-Accounts.emailTemplates.from     = "CybuzzSC <kishan@cybuzzsc.com>";
+Accounts.emailTemplates.from     = "CybuzzSC <----->";
 
 Accounts.emailTemplates.verifyEmail = {
   subject() {
@@ -22,4 +22,4 @@ Accounts.emailTemplates.verifyEmail = {
 
     return emailBody;
   }
-};
+};-----
