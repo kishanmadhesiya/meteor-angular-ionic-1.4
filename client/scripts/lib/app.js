@@ -20,6 +20,7 @@ import LoginCtrl from '../controllers/login';
 import ContactsCtrl from '../controllers/contacts';
 import DetailsCtrl from '../controllers/details';
 import MessagesCtrl from '../controllers/messages';
+import ChatsCtrl from '../controllers/chats';
 import InputDirective from '../directives/input';
 import CalendarFilter from '../filters/calander';
 
@@ -42,6 +43,7 @@ new Loader(App)
   .load(RoutesConfig)
   .load(LoginCtrl)
   .load(ContactsCtrl)
+  .load(ChatsCtrl)
   .load(DetailsCtrl)
   .load(MessagesCtrl)
   .load(SignupCtrl)

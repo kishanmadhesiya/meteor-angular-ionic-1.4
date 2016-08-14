@@ -18,8 +18,16 @@
             </a>
         </div>
     </div>
-    <ion-content>
+    <ion-content><br><br><br>
+            <div class="list">
+   
+  <a ng-repeat="message in chats.allChats"  class="item item-icon-left item-icon-right" ng-click="chats.chatOpen('{{message._id}}')">
+    <i class="icon ion-person" ></i>
+    {{getName "fv" }}
+    <i class="icon ion-ios-telephone-outline"></i>
+  </a>
 
+</div>
 
     </ion-content>
 

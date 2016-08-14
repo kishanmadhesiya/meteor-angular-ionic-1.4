@@ -98,7 +98,8 @@ export default class RoutesConfig extends Config {
 
           'tab-chats': {
 
-            templateUrl: templateChats
+            templateUrl: templateChats,
+            controller: 'ChatsCtrl as chats'
 
           }
 
