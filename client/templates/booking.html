@@ -1,0 +1,67 @@
+<ion-view view-title="Book Order">
+    <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+        <div class="tabs">
+            <a class="tab-item " href="#/tab/dashboard">
+                <i class="icon ion-star"></i>
+            </a>
+            <a class="tab-item active" href="#/tab/order">
+                <i class="icon ion-ios-cart"></i>
+            </a>
+            <a class="tab-item" href="#/tab/contacts">
+                <i class="icon ion-person"></i>
+            </a>
+            <a class="tab-item" href="#/tab/chats">
+                <i class="icon ion-chatbubble"></i>
+            </a>
+            <a class="tab-item" href="#/tab/settings">
+                <i class="icon ion-gear-a"></i>
+            </a>
+        </div>
+    </div>
+    <ion-content>
+        <br><br><br>
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+    <span class="input-label">Your Name</span>
+    <input type="text" ng-model="booking.data.name" placeholder="Kishan Kumar">
+  </label>
+            <label class="item item-input item-stacked-label">
+    <span class="input-label">Mobile No</span>
+    <input type="text" ng-model="booking.data.mobile" placeholder="9718502489">
+  </label>
+    <label class = "item item-input item-select">
+   <div class = "input-label">
+      Select Item
+   </div>
+	
+   <select ng-model="booking.data.item">
+       <option value="Coffee (Latte)" selected>Coffee (Latte)</option>
+      <option value="Capachino">Capachino</option>
+      <option value="Tea">Tea</option>
+      <option value="Maggiee">Maggiee</option>
+      <option value="Cold Drink">Cold Drink</option>
+   </select>
+</label>
+            <label class = "item item-input item-select">
+   <div class = "input-label">
+      Quantity
+   </div>
+	
+   <select ng-model="booking.data.quantity">
+       <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+   </select>
+</label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Remarks</span>
+    <textarea  ng-model="booking.data.remarks" placeholder="Remarks"></textarea>
+  </label>
+            <button class="button button-full button-royal" ng-click="booking.bookOrder()">
+  BOOK
+</button>
+</div>
+    </ion-content>
+
+</ion-view>
+

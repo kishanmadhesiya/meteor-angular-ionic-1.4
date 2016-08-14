@@ -20,7 +20,10 @@ import LoginCtrl from '../controllers/login';
 import ContactsCtrl from '../controllers/contacts';
 import DetailsCtrl from '../controllers/details';
 import MessagesCtrl from '../controllers/messages';
+import BookingCtrl from '../controllers/booking';
+import DashboardCtrl from '../controllers/dashboard';
 import ChatsCtrl from '../controllers/chats';
+import CancelCtrl from '../controllers/cancelorder';
 import InputDirective from '../directives/input';
 import CalendarFilter from '../filters/calander';
 
@@ -46,7 +49,10 @@ new Loader(App)
   .load(ChatsCtrl)
   .load(DetailsCtrl)
   .load(MessagesCtrl)
+  .load(DashboardCtrl)
   .load(SignupCtrl)
+  .load(BookingCtrl)
+  .load(CancelCtrl)
   .load(CalendarFilter)
   .load(InputDirective);
 

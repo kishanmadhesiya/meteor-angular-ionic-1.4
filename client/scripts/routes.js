@@ -36,7 +36,8 @@ export default class RoutesConfig extends Config {
 
           'tab-dashboard': {
 
-            templateUrl: templateDashboard
+            templateUrl: templateDashboard,
+            controller: 'DashboardCtrl as dashboard'
 
           }
 
@@ -120,6 +121,24 @@ export default class RoutesConfig extends Config {
 
         }
     })
+    .state('tab.booking', {
+        url: '/booking',
+        views: {
+          'tab-order': {
+            templateUrl: 'client/templates/booking.html',
+            controller: 'BookingCtrl as booking'
+          }
+        }
+})
+.state('tab.cancel', {
+        url: '/cancel',
+        views: {
+          'tab-order': {
+            templateUrl: 'client/templates/cancelorder.html',
+            controller: 'CancelCtrl as cancel'
+          }
+        }
+})
         .state('login', {
 
         url: '/login',

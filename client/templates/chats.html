@@ -23,8 +23,9 @@
    
   <a ng-repeat="message in chats.allChats"  class="item item-icon-left item-icon-right" ng-click="chats.chatOpen('{{message._id}}')">
     <i class="icon ion-person" ></i>
-    {{getName "fv" }}
-    <i class="icon ion-ios-telephone-outline"></i>
+    {{ chats.getName(message.userId_from,message.userId_to) }}
+          <p>{{message.lastMessage.text}}        ({{ message.lastMessage.timestamp | amDateFormat: 'HH:MM' }})
+</p>
   </a>
 
 </div>

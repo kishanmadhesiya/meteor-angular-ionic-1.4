@@ -1,4 +1,4 @@
-<ion-view view-title="Order">
+<ion-view view-title="Cancel Order">
     <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
         <div class="tabs">
             <a class="tab-item " href="#/tab/dashboard">
@@ -21,15 +21,14 @@
     <ion-content>
         <br><br><br>
         <div class="list">
-        <a class="item item-icon-left" href="#/tab/booking">
-    <i class="icon ion-paper-airplane"></i>
-    Book Order
-  </a>
-            <a class="item item-icon-left" href="#/tab/cancel">
-    <i class="icon ion-trash-a"></i>
-    Cancel Order
-  </a>
-        </div>
+            <div class="item item-button-right" ng-repeat="order in cancel.allOrder">
+                {{order.item}}
+                <p>{{order.timestamp |amDateFormat: 'D-M-Y HH:MM'}}</p>
+                <button class="button button-assertive" ng-click="cancel.cancelOrder(order._id)">
+      <i class="icon ion-trash-a"></i>
+    </button>
+  </div>
+</div>
     </ion-content>
 
 </ion-view>

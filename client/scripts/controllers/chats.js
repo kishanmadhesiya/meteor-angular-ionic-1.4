@@ -7,27 +7,27 @@ import angular from 'angular';
         import Ionic from 'ionic-scripts';
         import { Accounts } from 'meteor/accounts-base';
         import { Controller } from 'angular-ecmascript/module-helpers';
-        export default class ChatsCtrl extends Controller {        constructor($scope) {
+        export default class ChatsCtrl extends Controller {       
+                constructor($scope) {
             super(...arguments);
-            this.fid="abcd";
             this.helpers({
                 
                 allChats(){
                 return Chats.find({});
                 },
-                getName(){
-                    console.log(this.fid);
-//                    if(Meteor.userId()==fid){
-//                        var id=tid;
-//                    }else{
-//                       var id=fid; 
-//                    }
-//                    var data=Meteor.users.find({_id:id}).fetch();
-//                    console.log(data);
-                }
+                
             });
                 
         }
+        getName(fid,tid){
+                    if(Meteor.userId()==fid){
+                        var id=tid;
+                    }else{
+                       var id=fid; 
+                    }
+                    var data=Meteor.users.find({_id:id}).fetch();
+                    return data[0].profile.name;
+                }
         chatOpen(userid){
                     this.$state.go('tab.messages', { chatid: userid });
         }
